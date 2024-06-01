@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".quizResults">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/quiz_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="25dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/done" />
+
+        <TextView
+            android:id="@+id/results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You've Completed Quiz"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/correct_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correct:0"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/incorrect_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="InCorrect:0"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/restart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1"
+        android:text="Restart Quiz"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/round_button"/>
+</RelativeLayout>
